@@ -1,6 +1,6 @@
 /*
 Theme Name:     Madame Prata
-Theme URI:      
+Theme URI:
 Description:    Betheme child theme.
 Author:         Web41
 Author URI:     https://web41.com.br
@@ -119,4 +119,8 @@ Version:        0.1.0
     .menu_wrapper #menu #menu-mobile-menu li a {
         padding: 8px 10px;
     }
+}
+
+.single-product .section_wrapper .column .column_attr > h4 {
+	display: none;
 }
