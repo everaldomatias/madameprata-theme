@@ -121,31 +121,51 @@ Version:        0.1.0
     }
 }
 
-.single-product .section_wrapper .column .column_attr > h4 {
-	display: none;
+.single-product.woocommerce .mfn-product-add-to-cart .cart {
+	display: block;
 }
 
-.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner {
+.single-product .mfn-product-add-to-cart .cart #cfpp {
+	margin-bottom: 15px;
+}
+
+.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete {
 	display: flex;
-	flex-direction: column;
 }
 
-.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner .column_product_title {
-	order: 1
+.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete input {
+	border-radius: 3px;
+	font-size: 16px;
+	margin-right: 15px;
+	width: 130px;
 }
 
-.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner .column_product_price {
-	order: 2
+.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete {
+	background-color: var(--cor-destaque);
+	border-radius: 3px;
+	color: var(--cor-texto-destaque);
+	height: 52px;
+	width: 220px;
 }
 
-.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner .column_product_short_description {
-	order: 4;
+.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete svg {
+	fill: var(--cor-texto-destaque);
 }
 
-.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner .column_product_cart_button {
-	order: 3;
+.single-product .mfn-product-add-to-cart form.cart .quantity {
+	margin-right: 15px !important;
 }
 
-.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner .column_product_meta {
-	order: 5;
+.single-product .mfn-product-add-to-cart form.cart .quantity input {
+	border-radius: 3px;
+}
+
+.single-product .mfn-product-add-to-cart form.cart .single_add_to_cart_button {
+	padding: 17px 30px !important;
+	text-align: center;
+	width: 220px;
+}
+
+.single-product .mfn-product-add-to-cart form.cart .mfn-wish-button svg {
+	margin-top: 10px;
 }
