@@ -169,3 +169,22 @@ Version:        0.1.0
 .single-product .mfn-product-add-to-cart form.cart .mfn-wish-button svg {
 	margin-top: 10px;
 }
+
+@media screen and ( max-width: 959px ) {
+	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete {
+		display: block;
+	}
+
+	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete input {
+		width: 100%;
+	}
+
+	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete {
+		width: 100%;
+	}
+
+	.single-product .mfn-product-add-to-cart form.cart .single_add_to_cart_button {
+		margin-top: 15px;
+		width: 100%;
+	}
+}
