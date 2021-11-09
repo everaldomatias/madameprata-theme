@@ -124,3 +124,28 @@ Version:        0.1.0
 .single-product .section_wrapper .column .column_attr > h4 {
 	display: none;
 }
+
+.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner {
+	display: flex;
+	flex-direction: column;
+}
+
+.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner .column_product_title {
+	order: 1
+}
+
+.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner .column_product_price {
+	order: 2
+}
+
+.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner .column_product_short_description {
+	order: 4;
+}
+
+.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner .column_product_cart_button {
+	order: 3;
+}
+
+.single-product .section_wrapper .mcb-wrap:last-of-type .mcb-wrap-inner .column_product_meta {
+	order: 5;
+}
