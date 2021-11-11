@@ -121,7 +121,8 @@ Version:        0.1.0
     }
 }
 
-.single-product.woocommerce .mfn-product-add-to-cart .cart {
+.single-product.woocommerce .mfn-product-add-to-cart .cart,
+.single-product.woocommerce .woocommerce-variation-add-to-cart {
 	display: block;
 }
 
@@ -130,40 +131,53 @@ Version:        0.1.0
 }
 
 .single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete {
-	display: flex;
+	display: block;
+	overflow: hidden;
+}
+
+.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete::before {
+	content: 'Calcule o frete e o prazo de entrega estimados para sua região';
+	display: block;
+	padding-bottom: 10px;
+	width: 100%;
 }
 
 .single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete input {
-	border-radius: 3px;
+	border-radius: 4px;
+	float: left;
 	font-size: 16px;
 	margin-right: 15px;
-	width: 130px;
+	width: 35%;
 }
 
 .single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete {
 	background-color: var(--cor-destaque);
-	border-radius: 3px;
+	border-radius: 4px;
 	color: var(--cor-texto-destaque);
 	height: 52px;
-	width: 220px;
+	text-align: center;
+	width: 60%;
 }
 
 .single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete svg {
 	fill: var(--cor-texto-destaque);
 }
 
-.single-product .mfn-product-add-to-cart form.cart .quantity {
+.single-product.woocommerce .mfn-product-add-to-cart form.cart .quantity {
 	margin-right: 15px !important;
+	width: 35%;
 }
 
-.single-product .mfn-product-add-to-cart form.cart .quantity input {
-	border-radius: 3px;
+.single-product.woocommerce .mfn-product-add-to-cart form.cart .quantity input {
+	border-radius: 4px;
+	font-size: 14px;
+	padding: 13px 30px 14px !important;
 }
 
 .single-product .mfn-product-add-to-cart form.cart .single_add_to_cart_button {
-	padding: 17px 30px !important;
+	padding: 16px 30px !important;
 	text-align: center;
-	width: 220px;
+	width: 53%;
 }
 
 .single-product .mfn-product-add-to-cart form.cart .mfn-wish-button svg {
@@ -171,20 +185,65 @@ Version:        0.1.0
 }
 
 @media screen and ( max-width: 959px ) {
-	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete {
-		display: block;
-	}
-
 	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete input {
-		width: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		width: 30%;
 	}
 
 	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete {
-		width: 100%;
+		/* width: 100%; */
+	}
+
+	.single-product.woocommerce .mfn-product-add-to-cart form.cart .quantity {
+		margin-right: 10px !important;
+		width: 30%;
+	}
+
+	.single-product .mfn-product-add-to-cart form.cart .mfn-wish-button {
+		margin: 0 0 0 5px;
 	}
 
 	.single-product .mfn-product-add-to-cart form.cart .single_add_to_cart_button {
-		margin-top: 15px;
-		width: 100%;
+		font-size: 13px;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		width: 42%;
+	}
+}
+
+@media screen and ( max-width: 380px ) {
+	.single-product .product .section_wrapper {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+
+	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete input {
+		margin-right: 10px;
+		width: 42%;
+	}
+
+	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete {
+		padding-left: 35px;
+		padding-right: 5px;
+		width: 52%;
+	}
+
+	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete svg {
+		margin-top: 5px;
+		width: 30px;
+	}
+
+	.single-product.woocommerce .mfn-product-add-to-cart form.cart .quantity {
+		width: 42%;
+	}
+
+	.single-product .mfn-product-add-to-cart form.cart .single_add_to_cart_button {
+		font-size: 12px;
+		padding: 14px 10px !important;
+	}
+
+	.single-product .mfn-product-add-to-cart form.cart .mfn-wish-button svg {
+		width: 20px;
 	}
 }
