@@ -26,5 +26,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<button type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>">
         <svg width="26" viewBox="0 0 26 26"><defs><style>.path{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:1.5px;}</style></defs><circle class="path" cx="11.35" cy="11.35" r="6"/><line class="path" x1="15.59" y1="15.59" x2="20.65" y2="20.65"/></svg>
     </button>
-	<input type="hidden" name="post_type" value="product" />
+	<input type="hidden" name="post_type" value="produto" />
 </form>

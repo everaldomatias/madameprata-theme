@@ -23,6 +23,17 @@ function betheme_parent_theme_enqueue_styles() {
 }
 
 /**
+ * Enqueue admin styles.
+ */
+function betheme_admin_enqueue_styles() {
+	$rand = rand( 1, 9999999 );
+	$get_stylesheet_directory_uri = get_stylesheet_directory_uri();
+	wp_enqueue_style( 'madameprata-style-admin', $get_stylesheet_directory_uri . '/admin.css', [], $rand );
+}
+
+add_action( 'admin_enqueue_scripts', 'betheme_admin_enqueue_styles' );
+
+/**
  * Add woo search on home
  */
 function mp_home_search() {
