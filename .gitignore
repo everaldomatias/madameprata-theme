@@ -1,0 +1,35 @@
+# ignore everything in the root except the "wp-content" directory.
+!wp-content/
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+
+# ignore all plugins, except specific plugins
+plugins/*
+!/plugins/landing-pages/
+
+# ignore specific themes
+wp-content/themes/twenty*/
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore project files
+.sass-cache/
+*.css.map
+sftp-config.json
+.ftppass
+*.zip
+src/node_modules/*
+.vscode
+/.vscode
+sftp.json
