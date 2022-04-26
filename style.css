@@ -247,3 +247,9 @@ Version:        0.1.0
 		width: 20px;
 	}
 }
+
+.single-product .mcb-column-inner .price {
+	color: #e82f70;
+	font-size: 30px;
+	font-weight: 500;
+}
