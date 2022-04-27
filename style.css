@@ -253,3 +253,56 @@ Version:        0.1.0
 	font-size: 30px;
 	font-weight: 500;
 }
+
+.pisol-ppscw-container #calc_shipping_country_field {
+	display: none;
+}
+
+.pisol-shipping-calculator-form {
+	border-radius: 3px;
+}
+
+.pisol-shipping-calculator-form p {
+	margin-bottom: 0;
+}
+#calc_shipping_postcode {
+	border-radius: 3px;
+	padding: 12px 10px;
+}
+
+#calc_shipping_postcode_field {
+	float: left;
+	margin-right: 10px;
+	width: 70%;
+}
+
+.pisol-shipping-calculator-form p.form-row {
+	padding: 0;
+}
+
+#pisol-ppscw-alert-container {
+	width: 100%;
+}
+
+.pisol-ppscw-alert br {
+	display: none;
+}
+
+#pisol-ppscw-alert-container .pisol-ppscw-methods {
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+}
+
+#pisol-ppscw-alert-container .pisol-ppscw-methods li {
+	margin-left: 0;
+}
+
+a.button.pisol-shipping-calculator-button {
+	display: none;
+}
+
+@media (max-width: 500px) {
+	#calc_shipping_postcode_field {
+		width: 60%;
+	}
+}
