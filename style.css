@@ -306,3 +306,7 @@ a.button.pisol-shipping-calculator-button {
 		width: 60%;
 	}
 }
+
+.woocommerce-cart .woocommerce .woocommerce-message.alert.alert_success {
+	display: none;
+}
