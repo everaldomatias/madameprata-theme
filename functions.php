@@ -67,3 +67,14 @@ function mp_hide_shipping_when_free_is_available( $rates, $package ) {
 	return ! empty( $free ) ? $free : $rates;
 }
 add_filter( 'woocommerce_package_rates', 'mp_hide_shipping_when_free_is_available', 100, 2 );
+
+/**
+ * Change URL of the tracking code Correios
+ */
+function mp_change_tracking_code_url( $url, $tracking_code, $object ) {
+	if ( class_exists( 'WC_Correios' ) ) {
+		$url = sprintf( '<a href="https://rastreamento.correios.com.br/app/index.php">%s</a>', $tracking_code );
+	}
+	return $url;
+}
+add_filter( 'woocommerce_correios_email_tracking_core_url', 'mp_change_tracking_code_url', 10, 3 );
