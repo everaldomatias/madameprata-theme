@@ -18,7 +18,6 @@
 defined( 'ABSPATH' ) || exit;
 global $product;
 
-die('teste');
 
 // post navigation, prev/next post
 
