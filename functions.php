@@ -1,5 +1,6 @@
 <?php
 
+include dirname( __FILE__ ) . '/includes/settings.php';
 include dirname( __FILE__ ) . '/includes/woocommerce-functions.php';
 
 /**
