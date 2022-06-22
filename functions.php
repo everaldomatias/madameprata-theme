@@ -1,4 +1,7 @@
 <?php
+
+include dirname( __FILE__ ) . '/includes/woocommerce-functions.php';
+
 /**
  * Madame Prata Theme functions and definitions.
  *
@@ -29,6 +32,7 @@ function betheme_admin_enqueue_styles() {
 	$rand = rand( 1, 9999999 );
 	$get_stylesheet_directory_uri = get_stylesheet_directory_uri();
 	wp_enqueue_style( 'madameprata-style-admin', $get_stylesheet_directory_uri . '/admin.css', [], $rand );
+	wp_enqueue_style( 'madameprata-print-admin', $get_stylesheet_directory_uri . '/print.css', [], $rand, 'print' );
 }
 
 add_action( 'admin_enqueue_scripts', 'betheme_admin_enqueue_styles' );

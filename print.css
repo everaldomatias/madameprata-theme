@@ -1,0 +1,57 @@
+.wp-admin p {
+    font-size: 16px;
+}
+
+.wp-admin #wpadminbar,
+.wp-admin #adminmenuback,
+.wp-admin #adminmenuwrap {
+    display: none;
+}
+
+.wp-admin #wpcontent {
+    margin-left: 0;
+}
+
+.wp-admin #wpfooter {
+    display: none;
+}
+
+.wp-admin,
+.wp-admin #wpwrap {
+    height: auto;
+    min-height: 50%;
+    max-height: 100%;
+}
+
+.wp-admin .print-order .columns {
+    display: flex;
+}
+
+.wp-admin .print-order .columns .column {
+    flex-basis: 50%;
+}
+
+@page {
+    size: auto;
+    margin: 0;
+}
+
+@print {
+    @page :footer {
+        display: none
+    }
+
+    @page :header {
+        display: none
+    }
+}
+
+@media print {
+    @page {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    body {
+        padding: 80px;
+    }
+}
