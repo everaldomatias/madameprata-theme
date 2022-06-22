@@ -53,28 +53,65 @@ function mp_print_order_html() {
     print '<div class="column">';
         print "<h3>Faturamento</h3>";
 
-        print "<p>";
+        print "<span>";
         print $order->get_formatted_billing_address();
-        print "</p>";
+        print "</span>";
 
-        print "<h3>Endereco de e-mail</h3>";
-        print "<p>";
-        print $order->get_billing_email();
-        print "</p>";
+        if ( is_plugin_active( 'woocommerce-extra-checkout-fields-for-brazil/woocommerce-extra-checkout-fields-for-brazil.php' ) ) {
 
-        print "<h3>Telefone</h3>";
-        print "<p>";
-        print $order->get_billing_phone();
-        print "</p>";
+            print "<h3>Informações do clinete</h3>";
+
+            print "<span>";
+            print "<b>CPF:</b> " . esc_html( $order->get_meta( '_billing_cpf' ) );
+            print "</span>";
+
+            print "<span>";
+            print "<b>Data de Nascimento:</b> " . esc_html( $order->get_meta( '_billing_birthdate' ) );
+            print "</span>";
+
+            print "<span>";
+            print "<b>Sexo:</b> " . esc_html( $order->get_meta( '_billing_sex' ) );
+            print "</span>";
+
+            print "<span>";
+            print "<b>Telefone:</b> " . esc_html( $order->get_billing_phone() );
+            print "</span>";
+
+            if ( '' !== $order->get_meta( '_billing_cellphone' ) ) {
+                print "<span>";
+                print "<b>Celular:</b> " . esc_html( $order->get_meta( '_billing_cellphone' ) );
+                print "</span>";
+            }
+
+            print "<span>";
+            print "<b>E-mail:</b> " . esc_html( $order->get_billing_email() );
+            print "</span>";
+
+        } else {
+            print "<h3>Endereco de e-mail</h3>";
+            print "<span>";
+            print $order->get_billing_email();
+            print "</span>";
+    
+            print "<h3>Telefone</h3>";
+            print "<span>";
+            print $order->get_billing_phone();
+            print "</span>";
+    
+            print "<h3>Informações do cliente</h3>";
+            print "<span>";
+            print $order->get_billing_phone();
+            print "</span>";
+        }
 
     print '</div>';
 
     print '<div class="column">';
         print "<h3>Entrega</h3>";
 
-        print "<p>";
+        print "<span>";
         print $order->get_formatted_shipping_address();
-        print "</p>";
+        print "</span>";
     print '</div>';
 
     print '</div>';

@@ -37,3 +37,9 @@
 	border-color: #135e96;
 	color: #fff;
 }
+
+.print-order span {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 8px;
+}
