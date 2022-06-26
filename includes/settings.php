@@ -5,8 +5,8 @@ add_action( 'admin_init', 'mp_settings_menu' );
 
 function mp_add_admin_menu() {
     add_options_page(
-        __( 'Boas Vindas', 'boas-vindas' ),
-        __( 'Boas Vindas', 'boas-vindas' ),
+        __( 'Links de Boas Vindas', 'boas-vindas' ),
+        __( 'Links de Boas Vindas', 'boas-vindas' ),
         'manage_options',
         'boas-vindas',
         'mp_settings_page_render'
@@ -18,7 +18,7 @@ function mp_settings_menu() {
 
     add_settings_section(
         'mp_section',
-        __( 'Boas Vindas', 'boas-vindas' ),
+        __( 'Links de Boas Vindas', 'boas-vindas' ),
         'mp_settings_section_callback',
         'boas-vindas'
     );
