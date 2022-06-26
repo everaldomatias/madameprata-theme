@@ -12,6 +12,8 @@ function remove_dashboard_widgets() {
     unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
     unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
     remove_meta_box( 'wc_admin_dashboard_setup', 'dashboard', 'normal');
+    remove_meta_box( 'e-dashboard-overview', 'dashboard', 'normal');
+    remove_meta_box( 'wordfence_activity_report_widget', 'dashboard', 'normal' );
 }
 
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
