@@ -59,7 +59,7 @@ function mp_print_order_html() {
 
         if ( is_plugin_active( 'woocommerce-extra-checkout-fields-for-brazil/woocommerce-extra-checkout-fields-for-brazil.php' ) ) {
 
-            print "<h3>Informações do clinete</h3>";
+            print "<h3>Informações do cliente</h3>";
 
             print "<span>";
             print "<b>CPF:</b> " . esc_html( $order->get_meta( '_billing_cpf' ) );
@@ -112,13 +112,93 @@ function mp_print_order_html() {
         print "<span>";
         print $order->get_formatted_shipping_address();
         print "</span>";
-    print '</div>';
+
+        print "<h3>Detalhes do pedido</h3>";
+        print "<span>";
+        echo 'Número do pedido: ' . $order_id; 
+        print "</span>";
+
+        print "<span>";
+        echo 'Data do pedido: ' . date( 'd\/m\/Y', wc_string_to_timestamp( $order->get_date_created() ) ); 
+        print "</span>";
+
+        print "<span>";
+        echo 'Método de pagamento: ' . $order->get_payment_method_title(); 
+        print "</span>";
 
     print '</div>';
 
     print '</div>';
+    ?>
+
+    <table class="order-details">
+        <thead>
+            <tr>
+                <th class="product"><span>Produto</span></th>
+                <th class="quantity"><span>Quantidade</span></th>
+                <th class="price"><span>Preço</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ( $order->get_items() as $item_id => $item ) :
+                $product = $item->get_product(); ?>
+                <tr>
+                    <td class="product">
+                        <?php $description_label = __( 'Description', 'woocommerce-pdf-invoices-packing-slips' ); // registering alternate label translation ?>
+                        <span class="item-name"><?php echo $item['name']; ?></span>
+                        <dl class="meta">
+                            <?php $description_label = __( 'SKU', 'woocommerce-pdf-invoices-packing-slips' ); // registering alternate label translation ?>
+                            <?php if ( ! empty( $product->get_sku() ) ) : ?><dt class="sku">SKU:</dt><dd class="sku"><?php echo $product->get_sku(); ?></dd><?php endif; ?>
+                            <?php if ( ! empty( $product->get_weight() ) ) : ?><dt class="weight">Peso:</dt><dd class="weight"><?php echo nl2br( $product->get_weight() ); ?><?php echo get_option( 'woocommerce_weight_unit' ); ?></dd><?php endif; ?>
+                        </dl>
+                    </td>
+                    <td class="quantity"><?php echo $item['quantity']; ?></td>
+                    <td class="price"><?php echo $product->get_price_html(); ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+        <tfoot>
+            <tr class="no-borders">
+                <td class="no-borders">
+                </td>
+                <td class="no-borders" colspan="2">
+                    <table class="totals">
+                        <tfoot>
+                            <?php foreach ( get_woocommerce_totals( $order ) as $key => $total ) : ?>
+                                <tr class="<?php echo $key; ?>">
+                                    <th class="description"><?php echo $total['label']; ?></th>
+                                    <td class="price"><span class="totals-price"><?php echo $total['value']; ?></span></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tfoot>
+                    </table>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <?php
 
     print '<script type="text/javascript">';
     print 'window.onload = function() { window.print(); }';
     print '</script>';
+}
+
+
+/**
+ * Return the order totals listing
+ */
+function get_woocommerce_totals( $order ) {
+    $totals = $order->get_order_item_totals();
+    
+    foreach ( $totals as $key => $total ) {
+        $label = $total['label'];
+        $colon = strrpos( $label, ':' );
+        if( $colon !== false ) {
+            $label = substr_replace( $label, '', $colon, 1 );
+        }
+        $totals[$key]['label'] = $label;
+    }
+
+    return $totals;
 }
