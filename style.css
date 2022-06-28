@@ -326,3 +326,52 @@ a.button.pisol-shipping-calculator-button {
 	text-align: center;
 	cursor: pointer;
 }
+
+.contacts {
+	display: block;
+	padding: 60px 15px 45px;
+	width: 100%;
+}
+
+.contacts .contacts-content {
+	align-items: center;
+	display: flex;
+	gap: 15px;
+	width: 100%;
+}
+
+.contacts .contacts-content input[type="email"] {
+	border-radius: 5px;
+	display: block;
+	margin: 0;
+	width: 100%;
+}
+
+.contacts .contacts-content button {
+	margin: 0;
+}
+
+.contacts .contacts-response {
+	text-align: center;
+}
+
+.contacts .contacts-response span {
+	display: block;
+	font-style: italic;
+	padding: 10px;
+}
+
+@media (max-width: 500px) {
+	.contacts {
+		padding: 40px 0 25px;
+	}
+
+	.contacts .contacts-content {
+		gap: 5px;
+	}
+
+	.contacts .contacts-content button {
+		min-width: 65px;
+		padding: 12px 10px;
+	}
+}

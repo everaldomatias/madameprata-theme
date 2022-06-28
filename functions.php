@@ -1,6 +1,7 @@
 <?php
 
 include dirname( __FILE__ ) . '/includes/admin.php';
+include dirname( __FILE__ ) . '/includes/contatos.php';
 include dirname( __FILE__ ) . '/includes/settings.php';
 include dirname( __FILE__ ) . '/includes/woocommerce-functions.php';
 
