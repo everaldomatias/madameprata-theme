@@ -259,7 +259,8 @@ Version:        0.1.0
 }
 
 .pisol-shipping-calculator-form {
-	border-radius: 3px;
+	border: 0;
+	padding: 0;
 }
 
 .pisol-shipping-calculator-form p {
@@ -282,6 +283,16 @@ Version:        0.1.0
 
 #pisol-ppscw-alert-container {
 	width: 100%;
+}
+
+.pisol-ppscw-alert {
+	background-color: transparent;
+	border-radius: 3px;
+	border: 0;
+}
+
+.woocommerce .stock {
+	display: none !important;
 }
 
 .pisol-ppscw-alert br {
@@ -360,6 +371,16 @@ a.button.pisol-shipping-calculator-button {
 	display: block;
 	font-style: italic;
 	padding: 10px;
+}
+
+.mcb-wrap.wrap-sticky-rails {
+	position: relative !important;
+}
+
+.wrap-sticky-rails .mcb-wrap.sticky.stick-bottom {
+	position: relative !important;
+	top: 0 !important;
+	bottom: auto !important;
 }
 
 @media (max-width: 500px) {
