@@ -202,3 +202,12 @@ function get_woocommerce_totals( $order ) {
 
     return $totals;
 }
+
+/**
+ * Add parceled info on single
+ */
+function add_parceled_price() {
+    echo do_shortcode( '[product_parceled_loop]' );
+}
+
+add_action( 'woocommerce_before_add_to_cart_form', 'add_parceled_price', 1 );
