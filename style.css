@@ -278,13 +278,21 @@ Version:        0.1.0
 }
 
 .single-product .p-woo-pagseguro-price .p-woo-pagseguro-installment {
+	color: #333333;
 	font-size: 16px;
+	font-weight: 400;
 	line-height: 1.5;
 }
 
 .single-product .p-woo-pagseguro-price .p-woo-pagseguro-installment strong {
-	font-size: 14px;
+	color: #333333;
+	font-size: 16px;
 	font-weight: 400;
+	line-height: 1.5;
+	margin-left: 5px;
+}
+.single-product .p-woo-pagseguro-price .p-woo-pagseguro-installment br {
+	display: none;
 }
 
 /* Variações na single de produto */
