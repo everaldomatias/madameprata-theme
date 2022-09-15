@@ -30,6 +30,8 @@ function betheme_parent_theme_enqueue_styles() {
 	if ( is_singular( 'product' ) ) {
 		wp_enqueue_script( 'custom-woocommerce',  get_stylesheet_directory_uri() . '/assets/js/woo.js', [], $rand, true );
 	}
+
+	wp_enqueue_script( 'custom-header',  get_stylesheet_directory_uri() . '/assets/js/header.js', [], $rand, true );
 }
 
 /**

@@ -452,6 +452,19 @@ a.button.pisol-shipping-calculator-button {
 	bottom: auto !important;
 }
 
+#Action_bar .container .column.one .selo {
+	background-image: url('/wp-content/themes/madameprata-theme/assets/images/selo.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 30px;
+	color: white;
+	float: right;
+	font-size: 12px;
+	line-height: 1.4;
+	overflow: hidden;
+	padding: 5px 0 5px 40px;
+}
+
 @media (max-width: 600px) {
 	/* Título na single de produto */
 	.single-product .woocommerce-products-header__title.title.page-title {
