@@ -29,6 +29,27 @@ function betheme_parent_theme_enqueue_styles() {
 
 	if ( is_singular( 'product' ) ) {
 		wp_enqueue_script( 'custom-woocommerce',  get_stylesheet_directory_uri() . '/assets/js/woo.js', [], $rand, true );
+
+		$product = wc_get_product( get_the_ID() );
+		$woo_payment_discounts_setting = get_option( 'woo_payment_discounts_setting' );
+		$woo_payment_discounts_setting = maybe_unserialize( $woo_payment_discounts_setting );
+		$percentage = '';
+
+		if ( isset( $woo_payment_discounts_setting['wc_piggly_pix_gateway'] ) && ! empty( $woo_payment_discounts_setting['wc_piggly_pix_gateway'] ) ) {
+			if ( $woo_payment_discounts_setting['wc_piggly_pix_gateway']['type'] == 'percentage' ) {
+				$percentage = $woo_payment_discounts_setting['wc_piggly_pix_gateway']['amount'];
+			}
+		}
+
+		if ( $product && ! is_wp_error( $product ) ) {
+			/**
+			 * Print price and discount on HTML 
+			 */
+			wp_localize_script( 'custom-woocommerce', 'priceAndDiscount', [
+				'price'    => $product->get_price(),
+				'discount' => $percentage
+			]);
+		}
 	}
 
 	wp_enqueue_script( 'custom-header',  get_stylesheet_directory_uri() . '/assets/js/header.js', [], $rand, true );
