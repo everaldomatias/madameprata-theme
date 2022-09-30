@@ -394,6 +394,11 @@ a.button.pisol-shipping-calculator-button {
 	}
 }
 
+/* Checkout */
+.woocommerce-checkout .mfn-woo-cart-link {
+	display: none;
+}
+
 .woocommerce-cart .woocommerce .woocommerce-message.alert.alert_success {
 	display: none;
 }
