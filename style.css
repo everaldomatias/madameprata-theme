@@ -126,13 +126,24 @@ Version:        0.1.0
 	display: block;
 }
 
+
+/* Cálculo de frete com plugin WooCommerce Correios - Cálculo de Frete na Página do Produto (CFPP)*/
 .single-product .mfn-product-add-to-cart .cart #cfpp {
 	margin-bottom: 15px;
+	margin-top: 0;
 }
 
 .single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete {
 	display: block;
 	overflow: hidden;
+}
+
+.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete-loader {
+	border-color: #a2a2a2;
+	border-bottom-color: #e82f70;
+	height: 40px;
+	margin-top: 5px;
+	width: 40px;
 }
 
 .single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete::before {
@@ -161,6 +172,32 @@ Version:        0.1.0
 
 .single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete svg {
 	fill: var(--cor-texto-destaque);
+}
+
+.single-product .mfn-product-add-to-cart .resultado-frete {
+	background-color: rgba(249,249,249,1);
+	border: 1px solid #a2a2a2;
+	border-radius: 4px;
+	margin: 15px 16px 40px 0 !important;
+	overflow: hidden;
+}
+
+.single-product .mfn-product-add-to-cart .resultado-frete table {
+	margin-bottom: 0;
+}
+
+.single-product .mfn-product-add-to-cart .resultado-frete thead tr td {
+	font-weight: 600;
+}
+
+.single-product .mfn-product-add-to-cart .resultado-frete tr,
+.single-product .mfn-product-add-to-cart .resultado-frete tr td {
+	border: 0 !important;
+	box-shadow: none;
+}
+
+.single-product .mfn-product-add-to-cart .resultado-frete tr td {
+	padding: 10px !important;
 }
 
 .single-product.woocommerce .mfn-product-add-to-cart form.cart .quantity {
@@ -291,6 +328,14 @@ Version:        0.1.0
 	line-height: 1.5;
 }
 
+.single-product .p-woo-pagseguro-price .p-woo-pagseguro-installment span {
+	color: #e82f70;
+}
+
+.single-product .p-woo-pagseguro-price .p-woo-pagseguro-installment .woocommerce-Price-amount.amount {
+	color: #e82f70;
+}
+
 .single-product .p-woo-pagseguro-price .p-woo-pagseguro-installment strong {
 	color: #333333;
 	font-size: 16px;
@@ -300,6 +345,17 @@ Version:        0.1.0
 }
 .single-product .p-woo-pagseguro-price .p-woo-pagseguro-installment br {
 	display: none;
+}
+
+.mcb-section .mcb-wrap .mcb-item-429a0bff6 .mcb-column-inner {
+	height: auto !important;
+}
+
+.woocommerce-product-details__short-description h2 {
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 1.2;
+	text-transform: initial;
 }
 
 /* Variações na single de produto */
