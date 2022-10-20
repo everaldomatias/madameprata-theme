@@ -33,8 +33,13 @@
 
 .print-order span {
     display: block;
-    font-size: 16px;
-    line-height: 1.2;
+    font-size: 15px;
+    line-height: 1.15;
+}
+
+.print-order h2,
+.print-order h3 {
+	margin-top: 0;
 }
 
 @page {
@@ -53,6 +58,14 @@
 }
 
 @media print {
+	@page :footer {
+        display: none
+    }
+
+    @page :header {
+        display: none
+    }
+
     @page {
         margin-top: 0;
         margin-bottom: 0;
@@ -95,7 +108,6 @@ table.container {
 }
 
 tr {
-    border-top: 2px solid #555;
 	border-bottom: 2px solid #555;
 }
 
@@ -110,12 +122,12 @@ td.no-borders {
 
 div.bottom-spacer {
 	clear: both;
-	height: 8mm;
+	height: 5mm;
 }
 
 /* Header */
 table.head {
-	margin-bottom: 12mm;
+	margin-bottom: 10mm;
 }
 
 td.header img {
@@ -164,9 +176,14 @@ table.order-details {
 	page-break-before: avoid;
 }
 
-.quantity,
+.quantity {
+	text-align: center;
+	width: 15%;
+}
+
 .price {
-	width: 20%;
+	text-align: right;
+	width: 25%;
 }
 
 .order-details tr {
@@ -177,8 +194,17 @@ table.order-details {
 table.order-details td,
 table.order-details th {
 	border-bottom: 1px #ccc solid;
-	border-top: 1px #ccc solid;
 	padding: 5px;
+}
+
+table.order-details td.product .meta {
+	display: flex;
+	font-size: 14px;
+	padding-top: 7px;
+}
+
+table.order-details td.product .meta dd.sku {
+	margin-right: 15px;
 }
 
 table.order-details th {
@@ -190,6 +216,14 @@ table.order-details thead th {
 	color: white;
 	background-color: #555;
 	border-color: #555;
+}
+
+table.order-details thead th.quantity {
+	text-align: center;
+}
+
+table.order-details thead th.price {
+	text-align: right;
 }
 
 /* product bundles compatibility */
@@ -256,7 +290,6 @@ table.totals {
 table.totals th,
 table.totals td {
 	border: 0;
-	border-top: 1px solid #555;
 	border-bottom: 1px solid #555;
 }
 
@@ -267,7 +300,6 @@ table.totals td.price {
 
 table.totals tr.order_total td,
 table.totals tr.order_total th {
-	border-top: 2px solid #555;
 	border-bottom: 2px solid #555;
 	font-weight: bold;
 }
@@ -284,7 +316,6 @@ table.totals tr.payment_method {
 	right: 0;
 	height: 2cm; /* if you change the footer height, don't forget to change the bottom (=negative height) and the @page margin-bottom as well! */
 	text-align: center;
-	border-top: 0.1mm solid gray;
 	margin-bottom: 0;
 	padding-top: 2mm;
 }
@@ -295,4 +326,8 @@ table.totals tr.payment_method {
 }
 .pagenum,.pagecount {
 	font-family: sans-serif;
+}
+
+#wpbody-content {
+	padding-bottom: 25px;
 }
