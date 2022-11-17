@@ -92,12 +92,12 @@ function mp_print_order_html() {
             print "<span>";
             print $order->get_billing_email();
             print "</span>";
-    
+
             print "<h3>Telefone</h3>";
             print "<span>";
             print $order->get_billing_phone();
             print "</span>";
-    
+
             print "<h3>Informações do cliente</h3>";
             print "<span>";
             print $order->get_billing_phone();
@@ -115,15 +115,15 @@ function mp_print_order_html() {
 
         print "<h3>Detalhes do pedido</h3>";
         print "<span>";
-        echo 'Número do pedido: ' . $order_id; 
+        echo 'Número do pedido: ' . $order_id;
         print "</span>";
 
         print "<span>";
-        echo 'Data do pedido: ' . date( 'd\/m\/Y', wc_string_to_timestamp( $order->get_date_created() ) ); 
+        echo 'Data do pedido: ' . date( 'd\/m\/Y', wc_string_to_timestamp( $order->get_date_created() ) );
         print "</span>";
 
         print "<span>";
-        echo 'Método de pagamento: ' . $order->get_payment_method_title(); 
+        echo 'Método de pagamento: ' . $order->get_payment_method_title();
         print "</span>";
 
     print '</div>';
@@ -190,7 +190,7 @@ function mp_print_order_html() {
  */
 function get_woocommerce_totals( $order ) {
     $totals = $order->get_order_item_totals();
-    
+
     foreach ( $totals as $key => $total ) {
         $label = $total['label'];
         $colon = strrpos( $label, ':' );
@@ -211,3 +211,10 @@ function add_parceled_price() {
 }
 
 add_action( 'woocommerce_before_add_to_cart_form', 'add_parceled_price', 1 );
+
+
+function add_woocommerce_register_form_start_message() {
+	echo '<p class="woocommerce_register_form_start_message">Caso já possua cadastro conosco, faça o seu login abaixo.</p>';
+}
+
+add_action( 'woocommerce_register_form_start', 'add_woocommerce_register_form_start_message' );

@@ -475,6 +475,59 @@ a.button.pisol-shipping-calculator-button {
 	cursor: pointer;
 }
 
+.woocommerce-form.woocommerce-form-register .woocommerce_register_form_start_message {
+	text-align: left !important;
+}
+
+@media (max-width: 991px) {
+	.woocommerce-form.woocommerce-form-register .woocommerce_register_form_start_message {
+		text-align: left !important;
+	}
+}
+
+/* Checkout ARG Multistep Checkout for WooCommerce */
+.argmc-form-steps-wrapper .argmc-login-inner {
+	flex-direction: row-reverse;
+}
+
+.argmc-form-steps-wrapper .argmc-login-inner .argmc-login {
+	padding-left: 5%;
+	padding-right: 0;
+}
+
+.argmc-form-steps-wrapper .argmc-login-inner  .argmc-register {
+	padding-left: 0;
+	padding-right: 5%
+}
+
+.register-visible .argmc-login::after {
+	display: none;
+}
+
+.argmc-wrapper .argmc-nav-text, .argmc-wrapper .argmc-nav-buttons {
+	display: none !important;
+}
+
+@media (max-width: 991px) {
+	.argmc-form-steps-wrapper .argmc-login-inner {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.argmc-form-steps-wrapper .argmc-login-inner .argmc-login {
+		margin-top: 45px;
+		padding-left: 0;
+	}
+
+	.argmc-form-steps-wrapper .argmc-login-inner .argmc-login .login-headings {
+		margin-left: 15px;
+	}
+
+	.argmc-form-steps-wrapper .argmc-login-inner  .argmc-register {
+		padding-right: 0
+	}
+}
+
 .contacts {
 	display: block;
 	padding: 15px 15px 45px;
