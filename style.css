@@ -504,8 +504,17 @@ a.button.pisol-shipping-calculator-button {
 	display: none;
 }
 
-.argmc-wrapper .argmc-nav-text, .argmc-wrapper .argmc-nav-buttons {
+.argmc-wrapper .argmc-nav-text {
 	display: none !important;
+}
+
+.woocommerce-checkout .argmc-wrapper .argmc-nav-buttons {
+	display: block;
+	text-align: center;
+}
+
+#ship-to-different-address {
+	font-size: 16px;
 }
 
 @media (max-width: 991px) {
