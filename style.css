@@ -166,12 +166,15 @@ Version:        0.2.0
 	border-radius: 4px;
 	color: var(--cor-texto-destaque);
 	height: 52px;
+	padding-left: 30px !important;
+	padding-right: 30px !important;
 	text-align: center;
-	width: 60%;
+	width: 50%;
 }
 
 .single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete svg {
-	fill: var(--cor-texto-destaque);
+	display: none;
+	/* fill: var(--cor-texto-destaque); */
 }
 
 .single-product .mfn-product-add-to-cart .resultado-frete {
@@ -212,10 +215,19 @@ Version:        0.2.0
 }
 
 .single-product .mfn-product-add-to-cart form.cart .single_add_to_cart_button {
-	padding: 16px 30px !important;
+	font-weight: bold;
+	padding: 15px 30px !important;
 	text-align: center;
-	width: 53%;
+	width: 50%;
 }
+
+
+@media screen and ( max-width: 1035px ) {
+	.single-product .mfn-product-add-to-cart form.cart .single_add_to_cart_button {
+		padding: 15px 16px !important;
+	}
+}
+
 
 .single-product .mfn-product-add-to-cart form.cart .mfn-wish-button svg {
 	margin-top: 10px;
@@ -225,7 +237,7 @@ Version:        0.2.0
 	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete input {
 		padding-left: 5px;
 		padding-right: 5px;
-		width: 30%;
+		width: 40%;
 	}
 
 	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete {
@@ -233,8 +245,8 @@ Version:        0.2.0
 	}
 
 	.single-product.woocommerce .mfn-product-add-to-cart form.cart .quantity {
-		margin-right: 10px !important;
-		width: 30%;
+		margin-right: 15px !important;
+		width: 40%;
 	}
 
 	.single-product .mfn-product-add-to-cart form.cart .mfn-wish-button {
@@ -243,9 +255,7 @@ Version:        0.2.0
 
 	.single-product .mfn-product-add-to-cart form.cart .single_add_to_cart_button {
 		font-size: 13px;
-		padding-left: 15px !important;
-		padding-right: 15px !important;
-		width: 42%;
+		padding: 15px 10px !important;
 	}
 }
 
@@ -257,13 +267,11 @@ Version:        0.2.0
 
 	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete input {
 		margin-right: 10px;
-		width: 42%;
 	}
 
 	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete {
 		padding-left: 35px;
 		padding-right: 5px;
-		width: 52%;
 	}
 
 	.single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete svg {
@@ -272,12 +280,7 @@ Version:        0.2.0
 	}
 
 	.single-product.woocommerce .mfn-product-add-to-cart form.cart .quantity {
-		width: 42%;
-	}
-
-	.single-product .mfn-product-add-to-cart form.cart .single_add_to_cart_button {
-		font-size: 12px;
-		padding: 14px 10px !important;
+		margin-right: 10px !important;
 	}
 
 	.single-product .mfn-product-add-to-cart form.cart .mfn-wish-button svg {
