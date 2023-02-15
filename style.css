@@ -5,7 +5,7 @@ Description:    Betheme child theme.
 Author:         Web41
 Author URI:     https://web41.com.br
 Template:       betheme
-Version:        0.2.0
+Version:        0.3.0
 */
 
 @media (max-width: 767px) {
@@ -131,6 +131,46 @@ Version:        0.2.0
 .single-product .mfn-product-add-to-cart .cart #cfpp {
 	margin-bottom: 15px;
 	margin-top: 0;
+}
+
+/* Oculta cálculo de frete, quantidade e botão no carregamento da página (para exibir pelo JS) */
+.single-product .mfn-product-add-to-cart .cart #cfpp,
+.single-product button.single_add_to_cart_button,
+.single-product.woocommerce .mfn-product-add-to-cart form.cart .quantity,
+.single-product .product-out-stock {
+	display: none;
+}
+
+.single-product.woocommerce-type-simple.woocommerce-in-stock button.single_add_to_cart_button,
+.single-product.woocommerce-type-simple.woocommerce-in-stock .mfn-product-add-to-cart form.cart .quantity {
+	display: block;
+}
+
+.single-product.woocommerce-out-stock:not(.woocommerce-type-variable) .product-out-stock {
+	display: table;
+}
+
+.single-product .product-out-stock {
+	background-color: rgba(249,249,249,1);
+	border: 1px solid #e82f70;
+	line-height: 1;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	padding: 15px;
+}
+
+.single-product .product-out-stock span {
+	color: #e82f70;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+@media (max-width: 980px) {
+	.woocommerce .variations_form .mfn-variations-wrapper .mfn-vr {
+		display: block;
+	}
 }
 
 .single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete {
@@ -639,4 +679,52 @@ a.button.pisol-shipping-calculator-button {
 	.contacts .contacts-content button {
 		padding: 12px 10px;
 	}
+}
+
+.woocommerce-checkout input[type="date"],
+.woocommerce-checkout input[type="email"],
+.woocommerce-checkout input[type="number"],
+.woocommerce-checkout input[type="password"],
+.woocommerce-checkout input[type="search"],
+.woocommerce-checkout input[type="tel"],
+.woocommerce-checkout input[type="text"],
+.woocommerce-checkout input[type="url"],
+.woocommerce-checkout select,
+.woocommerce-checkout textarea,
+.woocommerce-checkout .woocommerce .quantity input.qty,
+.woocommerce-checkout .wp-block-search input[type="search"],
+.woocommerce-checkout .dark input[type="email"],
+.woocommerce-checkout .dark input[type="password"],
+.woocommerce-checkout .dark input[type="tel"],
+.woocommerce-checkout .dark input[type="text"],
+.woocommerce-checkout .dark select,
+.woocommerce-checkout .dark textarea,
+.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__rendered,
+.woocommerce-checkout input[type="date"]:focus,
+.woocommerce-checkout input[type="email"]:focus,
+.woocommerce-checkout input[type="number"]:focus,
+.woocommerce-checkout input[type="password"]:focus,
+.woocommerce-checkout input[type="search"]:focus,
+.woocommerce-checkout input[type="tel"]:focus,
+.woocommerce-checkout input[type="text"]:focus,
+.woocommerce-checkout input[type="url"]:focus,
+.woocommerce-checkout select:focus,
+.woocommerce-checkout textarea:focus,
+.woocommerce-checkout .woocommerce .quantity input.qty:focus,
+.woocommerce-checkout .wp-block-search input[type="search"]:focus,
+.woocommerce-checkout .dark input[type="email"]:focus,
+.woocommerce-checkout .dark input[type="password"]:focus,
+.woocommerce-checkout .dark input[type="tel"]:focus,
+.woocommerce-checkout .dark input[type="text"]:focus,
+.woocommerce-checkout .dark select:focus,
+.woocommerce-checkout .dark textarea:focus,
+.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__rendered:focus,
+.woocommerce-checkout .woocommerce form .form-row.woocommerce-validated .select2-container,
+.woocommerce-checkout .woocommerce form .form-row.woocommerce-validated input.input-text,
+.woocommerce-checkout .woocommerce form .form-row.woocommerce-validated select,
+.woocommerce-checkout .woocommerce form .form-row.woocommerce-validated input.input-text.validate[required],
+.woocommerce-checkout .woocommerce form .select2-container--default .select2-selection--single
+{
+	border-color: #999999;
+	color: #000000;
 }
