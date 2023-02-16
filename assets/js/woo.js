@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		divMessageStock.classList.add('product-out-stock')
 
 		let spanMessageStock = document.createElement('span')
-		spanMessageStock.innerText = 'Essa opção está fora de estoque'
+		spanMessageStock.innerText = 'Essa opção está Fora de Estoque'
 		divMessageStock.appendChild(spanMessageStock)
 		document.querySelector('.single-product .mfn-variations-wrapper').appendChild(divMessageStock)
 
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		divMessageStock.classList.add('product-out-stock')
 
 		let spanMessageStock = document.createElement('span')
-		spanMessageStock.innerText = 'Esse produto está fora de estoque'
+		spanMessageStock.innerText = 'Esse produto está Fora de Estoque'
 		divMessageStock.appendChild(spanMessageStock)
 		document.querySelector('.single-product .price').appendChild(divMessageStock)
 	}
