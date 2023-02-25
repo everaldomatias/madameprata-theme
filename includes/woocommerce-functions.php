@@ -218,3 +218,21 @@ function add_woocommerce_register_form_start_message() {
 }
 
 add_action( 'woocommerce_register_form_start', 'add_woocommerce_register_form_start_message' );
+
+/**
+ * Remove function mfn_continue_shippping_link of the hook woocommerce_after_cart_totals
+ */
+function mp_remove_mfn_continue_shippping_link() {
+	remove_action( 'woocommerce_after_cart_totals', 'mfn_continue_shippping_link' );
+}
+
+add_action( 'wp_head', 'mp_remove_mfn_continue_shippping_link' );
+
+/**
+ * Add link to continue shopping on cart
+ */
+function mp_add_continue_shippping_link() {
+	echo '<a href="' . home_url( 'loja-de-prata-925' ) . '" class="mfn-woo-cart-link">'. __( 'Continue shopping', 'woocommerce' ) .'</a>';
+}
+
+add_action( 'woocommerce_after_cart_totals', 'mp_add_continue_shippping_link' );
