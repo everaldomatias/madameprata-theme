@@ -1,6 +1,6 @@
 <?php
 
-define( 'MADAMEPRATA_VERSION', '0.3.1' );
+define( 'MADAMEPRATA_VERSION', '0.3.3' );
 
 /**
  * To develop, change version to random number
@@ -180,3 +180,38 @@ function mp_add_woocommerce_body_class( $classes ) {
 }
 
 add_filter( 'body_class', 'mp_add_woocommerce_body_class' );
+
+function mp_search_filter( $query ) {
+	global $wpdb;
+	if ( $query->is_search() && ! is_admin() ) {
+		if ( isset( $query->query['s'] ) && ! empty( $query->query['s'] ) ) {
+			$like = '%' . $wpdb->esc_like( sanitize_text_field( $query->query['s'] ) ) . '%';
+			$prepare = $wpdb->prepare(
+				"SELECT p.ID
+				FROM {$wpdb->prefix}posts AS p
+				WHERE p.post_type = %s
+					AND p.post_status = 'publish'
+					AND (p.post_excerpt LIKE %s OR p.post_title LIKE %s OR p.post_content LIKE %s)",
+				'product',
+				$like,
+				$like,
+				$like
+			);
+
+			$results = $wpdb->get_results( $prepare );
+
+			$post_ids = [];
+
+			foreach ( $results as $result ) {
+				$post_ids[] = $result->ID;
+			}
+
+			if ( count( $post_ids ) ) {
+				$query->set( 'post__in', $post_ids );
+				$query->set( 'posts_per_page', 12 );
+			}
+		}
+	}
+}
+
+add_action( 'pre_get_posts', 'mp_search_filter', 99 );

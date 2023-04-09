@@ -2,6 +2,8 @@
 
 ## Changelog
 
+0.3.3 - Adiciona filtro no resultado de pesquisa para localizar a palavra pesquisada dento do campo de resumo dos produtos, no título ou no content - 09/04/2023
+
 0.3.2 - Remove link de "Continue comprando" nativo do tema e adiciona link personalizado, apontando para "/loja-de-prata-925/" - 25/02/2023
 
 0.3.1 - Altera escrita de "fora de estoque" para "Fora de estoque" - 16/02/2023
