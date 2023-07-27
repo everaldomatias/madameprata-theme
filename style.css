@@ -5,7 +5,7 @@ Description:    Betheme child theme.
 Author:         Web41
 Author URI:     https://web41.com.br
 Template:       betheme
-Version:        0.3.3
+Version:        0.3.4
 */
 
 @media (max-width: 767px) {
@@ -152,7 +152,7 @@ Version:        0.3.3
 
 .single-product .product-out-stock {
 	background-color: rgba(249,249,249,1);
-	border: 1px solid #e82f70;
+	border: 1px solid #a54b4b;
 	line-height: 1;
 	margin-bottom: 15px;
 	margin-top: 15px;
@@ -160,7 +160,7 @@ Version:        0.3.3
 }
 
 .single-product .product-out-stock span {
-	color: #e82f70;
+	color: #a54b4b;
 	display: inline-block;
 	font-size: 16px;
 	font-weight: 700;
@@ -180,7 +180,7 @@ Version:        0.3.3
 
 .single-product .mfn-product-add-to-cart .cart #cfpp .calculo-de-frete #calcular-frete-loader {
 	border-color: #a2a2a2;
-	border-bottom-color: #e82f70;
+	border-bottom-color: #a54b4b;
 	height: 40px;
 	margin-top: 5px;
 	width: 40px;
@@ -341,14 +341,14 @@ Version:        0.3.3
 
 /* Preço na single de produto */
 .single-product .mcb-column-inner .price {
-	color: #e82f70;
+	color: #a54b4b;
 	font-size: 28px;
 	font-weight: 800;
 	line-height: 1.2;
 }
 
 .single-product .mcb-column-inner .price ins {
-	color: #e82f70;
+	color: #a54b4b;
 	font-size: 28px;
 	font-weight: 800 !important;
 	line-height: 1.2;
@@ -372,11 +372,11 @@ Version:        0.3.3
 }
 
 .single-product .p-woo-pagseguro-price .p-woo-pagseguro-installment span {
-	color: #e82f70;
+	color: #a54b4b;
 }
 
 .single-product .p-woo-pagseguro-price .p-woo-pagseguro-installment .woocommerce-Price-amount.amount {
-	color: #e82f70;
+	color: #a54b4b;
 }
 
 .single-product .p-woo-pagseguro-price .p-woo-pagseguro-installment strong {
@@ -727,4 +727,8 @@ a.button.pisol-shipping-calculator-button {
 {
 	border-color: #999999;
 	color: #000000;
+}
+
+.woocommerce-product-gallery .flex-direction-nav {
+	display: none !important;
 }
