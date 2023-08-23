@@ -2,6 +2,8 @@
 
 ## Changelog
 
+0.3.5 - Adiciona target nos links do painel personalizado do admin - 23/08/2023
+
 0.3.4 - Altera cores principais e esconde botões de navegação das galerias - 26/07/2023
 
 0.3.3 - Adiciona filtro no resultado de pesquisa para localizar a palavra pesquisada dento do campo de resumo dos produtos, no título ou no content - 09/04/2023

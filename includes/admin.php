@@ -22,7 +22,7 @@ add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
  * Remove the default welcome dashboard message
  *
  * @access      public
- * @since       1.0 
+ * @since       1.0
  * @return      void
 */
 remove_action( 'welcome_panel', 'wp_welcome_panel', 100 );
@@ -31,7 +31,7 @@ remove_action( 'welcome_panel', 'wp_welcome_panel', 100 );
  * Custom welcome panel function
  *
  * @access      public
- * @since       1.0 
+ * @since       1.0
  * @return      void
  */
 function wpex_wp_welcome_panel() { ?>
@@ -62,7 +62,7 @@ function wpex_wp_welcome_panel() { ?>
             <div class="buttons">
                 <?php foreach( $reorder_array_buttons as $button ) : ?>
                     <?php if ( '' !== $button['title'] && '' !== $button['link'] ) : ?>
-                        <a href="<?php echo esc_url( $button['link'] ); ?>"><?php echo esc_attr( $button['title'] ); ?></a>
+                        <a target="_blank" href="<?php echo esc_url( $button['link'] ); ?>"><?php echo esc_attr( $button['title'] ); ?></a>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
