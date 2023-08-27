@@ -1,6 +1,6 @@
 <?php
 
-define( 'MADAMEPRATA_VERSION', '0.3.3' );
+define( 'MADAMEPRATA_VERSION', '0.3.6' );
 
 /**
  * To develop, change version to random number
@@ -20,7 +20,7 @@ include dirname( __FILE__ ) . '/includes/woocommerce-functions.php';
  * @package madameprata
  */
 
-add_action( 'wp_enqueue_scripts', 'betheme_parent_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'betheme_parent_theme_enqueue_styles', 100 );
 
 /**
  * Enqueue scripts and styles.
@@ -73,6 +73,10 @@ function betheme_parent_theme_enqueue_styles() {
 				);
 			}
 		}
+	}
+
+	if ( is_checkout() ) {
+		wp_enqueue_script( 'custom-checkout-woocommerce',  get_stylesheet_directory_uri() . '/assets/js/checkout.js', [], MADAMEPRATA_VERSION, true );
 	}
 
 	wp_enqueue_script( 'custom-header',  get_stylesheet_directory_uri() . '/assets/js/header.js', [], MADAMEPRATA_VERSION, true );

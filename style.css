@@ -5,7 +5,7 @@ Description:    Betheme child theme.
 Author:         Web41
 Author URI:     https://web41.com.br
 Template:       betheme
-Version:        0.3.5
+Version:        0.3.6
 */
 
 @media (max-width: 767px) {
@@ -526,6 +526,60 @@ a.button.pisol-shipping-calculator-button {
 	.woocommerce-form.woocommerce-form-register .woocommerce_register_form_start_message {
 		text-align: left !important;
 	}
+}
+
+.wc_payment_methods_custom {
+	display: flex;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li {
+	border: 0;
+	margin-right: 30px;
+	padding: 0;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method_custom label {
+	/* display: flex;
+	gap: 15px; */
+	padding: 50px 15px 15px 0;
+	position: relative;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method_custom {
+	border-radius: 0;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method_custom.active {
+	border-bottom: 3px solid #a54b4b;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method_custom label::before {
+	content: '';
+	overflow: hidden;
+	height: 40px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: contain;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method_custom.payment_method_wc_piggly_pix_gateway label::before {
+	background-image: url('/wp-content/themes/madameprata-theme/assets/images/pix.png');
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method_custom.payment_method_pagseguro label::before {
+	background-image: url('/wp-content/themes/madameprata-theme/assets/images/pagseguro.png');
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method_custom label img {
+	display: none;
+}
+
+.woocommerce-checkout #payment div.payment_box > p:first-of-type {
+	display: none;
 }
 
 /* Checkout ARG Multistep Checkout for WooCommerce */
