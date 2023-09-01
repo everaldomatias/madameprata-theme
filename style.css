@@ -576,6 +576,24 @@ a.button.pisol-shipping-calculator-button {
 	display: none;
 }
 
+/* Checkout coupon */
+.woocommerce-cart-form .actions .coupon > label {
+    margin-right: 10px;
+    padding-top: 14px;
+}
+
+.woocommerce-cart-form .actions .coupon #coupon_code {
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: inherit;
+    text-transform: initial;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 200px;
+}
+
 /* Checkout ARG Multistep Checkout for WooCommerce */
 .argmc-form-steps-wrapper .argmc-login-inner {
 	flex-direction: row-reverse;
