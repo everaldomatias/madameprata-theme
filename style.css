@@ -532,12 +532,6 @@ a.button.pisol-shipping-calculator-button {
 	display: flex;
 }
 
-.woocommerce-checkout #payment ul.payment_methods li {
-	border: 0;
-	margin-right: 30px;
-	padding: 0;
-}
-
 .woocommerce-checkout #payment ul.payment_methods li.wc_payment_method_custom label {
 	/* display: flex;
 	gap: 15px; */

@@ -75,10 +75,6 @@ function betheme_parent_theme_enqueue_styles() {
 		}
 	}
 
-	if ( is_checkout() ) {
-		wp_enqueue_script( 'custom-checkout-woocommerce',  get_stylesheet_directory_uri() . '/assets/js/checkout.js', [], MADAMEPRATA_VERSION, true );
-	}
-
 	wp_enqueue_script( 'custom-header',  get_stylesheet_directory_uri() . '/assets/js/header.js', [], MADAMEPRATA_VERSION, true );
 }
 
