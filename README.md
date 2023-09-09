@@ -2,6 +2,10 @@
 
 ## Changelog
 
+0.3.7 - Remove título duplicado das etapas de checkout na versão desktop - 09/09/2023
+
+0.3.6 - Ajuste na fonte do campo de cupom - 01/09/2023
+
 0.3.5 - Adiciona target nos links do painel personalizado do admin - 23/08/2023
 
 0.3.4 - Altera cores principais e esconde botões de navegação das galerias - 26/07/2023

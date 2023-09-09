@@ -630,6 +630,12 @@ a.button.pisol-shipping-calculator-button {
 	font-size: 16px;
 }
 
+@media (min-width: 767px) {
+	#customer_details .woocommerce-billing-fields > h3 {
+		display: none;
+	}
+}
+
 @media (max-width: 991px) {
 	.argmc-form-steps-wrapper .argmc-login-inner {
 		display: flex;
