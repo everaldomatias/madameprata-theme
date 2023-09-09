@@ -2,6 +2,8 @@
 
 ## Changelog
 
+0.3.8 - Ajustes na página Minha Conta - 09/09/2023
+
 0.3.7 - Remove título duplicado das etapas de checkout na versão desktop - 09/09/2023
 
 0.3.6 - Ajuste na fonte do campo de cupom - 01/09/2023
