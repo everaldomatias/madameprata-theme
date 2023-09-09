@@ -804,3 +804,12 @@ a.button.pisol-shipping-calculator-button {
 .woocommerce-product-gallery .flex-direction-nav {
 	display: none !important;
 }
+
+/* My account */
+.woocommerce-account .woocommerce-MyAccount-navigation-link--lista-de-desejos a::before {
+	content: '\e899';
+}
+
+.woocommerce-account .addresses .title h3 {
+	line-height: 1.2;
+}
