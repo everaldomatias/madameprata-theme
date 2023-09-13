@@ -5,7 +5,7 @@ Description:    Betheme child theme.
 Author:         Web41
 Author URI:     https://web41.com.br
 Template:       betheme
-Version:        0.3.6
+Version:        0.3.9
 */
 
 @media (max-width: 767px) {
@@ -520,6 +520,26 @@ a.button.pisol-shipping-calculator-button {
 
 .woocommerce-form.woocommerce-form-register .woocommerce_register_form_start_message {
 	text-align: left !important;
+}
+
+.wc_payment_methods .wc_payment_method_tabs {
+	display: flex;
+	gap: 15px;
+}
+
+.wc_payment_methods .wc_payment_method_tabs .wc_payment_method_tab {
+	background-color: #fff !important;
+	padding-bottom: 0;
+}
+
+.wc_payment_methods .wc_payment_method_content .wc_payment_method {
+	border: 0 !important;
+	margin-bottom: 0 !important;
+	padding: 0 !important;
+}
+
+.wc_payment_methods .wc_payment_method_content .wc_payment_method .payment_box {
+	background-color: #fff !important;
 }
 
 @media (max-width: 991px) {
