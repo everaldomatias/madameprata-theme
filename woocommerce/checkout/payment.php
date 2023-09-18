@@ -29,7 +29,8 @@ if ( ! wp_doing_ajax() ) {
 
 				<div class="wc_payment_method_tabs">
 					<?php foreach ( $available_gateways as $gateway ) : ?>
-						<li class="wc_payment_method_tab">
+						<?php $tab_class = ( $gateway->chosen ) ? "wc_payment_method_tab active" : "wc_payment_method_tab"; ?>
+						<li class="<?php echo $tab_class; ?>" data-tab="tab-<?php echo esc_attr( $gateway->id ); ?>">
 							<input id="payment_method_<?php echo esc_attr( $gateway->id ); ?>" type="radio" class="input-radio" name="payment_method" value="<?php echo esc_attr( $gateway->id ); ?>" <?php checked( $gateway->chosen, true ); ?> data-order_button_text="<?php echo esc_attr( $gateway->order_button_text ); ?>" />
 
 							<label for="payment_method_<?php echo esc_attr( $gateway->id ); ?>">

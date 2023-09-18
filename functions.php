@@ -1,6 +1,6 @@
 <?php
 
-define( 'MADAMEPRATA_VERSION', '0.3.9' );
+define( 'MADAMEPRATA_VERSION', '0.3.10' );
 
 /**
  * To develop, change version to random number

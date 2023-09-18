@@ -236,3 +236,15 @@ function mp_add_continue_shippping_link() {
 }
 
 add_action( 'woocommerce_after_cart_totals', 'mp_add_continue_shippping_link' );
+
+function mp_add_message_register() {
+	echo '<p class="mp_woocommerce_register_form_start_message">Insira o seu e-mail para se cadastrar</p>';
+}
+
+add_action( 'woocommerce_register_form_start', 'mp_add_message_register' );
+
+function mp_add_message_login() {
+	echo '<p class="mp_woocommerce_login_form_start_message">Caso possua cadastro, insira seu e-mail e senha</p>';
+}
+
+add_action( 'woocommerce_login_form_start', 'mp_add_message_login' );

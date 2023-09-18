@@ -5,7 +5,7 @@ Description:    Betheme child theme.
 Author:         Web41
 Author URI:     https://web41.com.br
 Template:       betheme
-Version:        0.3.9
+Version:        0.3.10
 */
 
 @media (max-width: 767px) {
@@ -525,11 +525,16 @@ a.button.pisol-shipping-calculator-button {
 .wc_payment_methods .wc_payment_method_tabs {
 	display: flex;
 	gap: 15px;
+	margin-bottom: 15px;
 }
 
 .wc_payment_methods .wc_payment_method_tabs .wc_payment_method_tab {
 	background-color: #fff !important;
-	padding-bottom: 0;
+	padding-bottom: 0 !important;
+}
+
+.wc_payment_methods .wc_payment_method_tabs .wc_payment_method_tab.active {
+	border-bottom: 4px solid #a54b4b !important;
 }
 
 .wc_payment_methods .wc_payment_method_content .wc_payment_method {
@@ -542,10 +547,20 @@ a.button.pisol-shipping-calculator-button {
 	background-color: #fff !important;
 }
 
-@media (max-width: 991px) {
-	.woocommerce-form.woocommerce-form-register .woocommerce_register_form_start_message {
-		text-align: left !important;
-	}
+.woocommerce-form.woocommerce-form-register .woocommerce_register_form_start_message {
+	display: none;
+}
+
+.woocommerce-form.woocommerce-form-register .mp_woocommerce_register_form_start_message {
+	text-align: left !important;
+}
+
+.woocommerce-form.woocommerce-form-login .mp_woocommerce_login_form_start_message {
+	text-align: left !important;
+}
+
+.woocommerce-form-login p:not([class]) {
+	display: none;
 }
 
 .wc_payment_methods_custom {

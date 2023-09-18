@@ -2,7 +2,9 @@
 
 ## Changelog
 
-0.3.9 = Adiciona versão 2 dos métodos de pagamentos em abas - 12/09/2023
+0.3.10 - Atualiza versão 2 dos métodos de pagamentos em abas - 18/09/2023
+
+0.3.9 - Adiciona versão 2 dos métodos de pagamentos em abas - 12/09/2023
 
 0.3.8 - Ajustes na página Minha Conta - 09/09/2023
 
