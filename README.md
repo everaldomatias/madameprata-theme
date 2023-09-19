@@ -2,6 +2,8 @@
 
 ## Changelog
 
+0.3.11 - Remove alerta de produto adicionado na página carrinho - 18/09/2023
+
 0.3.10 - Atualiza versão 2 dos métodos de pagamentos em abas - 18/09/2023
 
 0.3.9 - Adiciona versão 2 dos métodos de pagamentos em abas - 12/09/2023

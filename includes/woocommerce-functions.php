@@ -248,3 +248,5 @@ function mp_add_message_login() {
 }
 
 add_action( 'woocommerce_login_form_start', 'mp_add_message_login' );
+
+add_filter( 'wc_add_to_cart_message_html', '__return_false' );
